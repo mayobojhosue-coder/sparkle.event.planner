@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Sparkle Event Planner</title>
+
+<!-- Polices élégantes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #6b0f1a; /* rouge bordeaux */
+    color: white;
+}
+
+/* ===== PAGE PRESENTATION ===== */
+#intro {
+    position: fixed;
+    inset: 0;
+    background-color: #6b0f1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+#intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #f2c94c;
+    animation: fade 3s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+/* ===== ACCUEIL ===== */
+#home {
+    display: none;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+#home h2 {
+    font-family: 'Playfair Display', serif;
+    color: #f2c94c;
+    font-size: 36px;
+}
+
+#home p {
+    max-width: 600px;
+    margin: 20px auto 60px;
+    opacity: 0.9;
+}
+
+/* ===== CARTES ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #6b0f1a;
+}
+
+/* ===== MODALE CADEAU ===== */
+#giftModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#giftBox {
+    background: #6b0f1a;
+    border: 2px solid #f2c94c;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 420px;
+}
+
+#giftBox h2 {
+    font-family: 'Playfair Display', serif;
+    color: #f2c94c;
+}
+
+#giftBox button {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+#yesBtn {
+    background: #f2c94c;
+}
+
+#noBtn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎄 INTRO -->
+<div id="intro">
+    <h1>Sparkle Event Planner</h1>
+</div>
+
+<!-- 🎁 MODALE CADEAU -->
+<div id="giftModal">
+    <div id="giftBox">
+        <h2>🎄 Cadeau de Noël 🎁</h2>
+        <p>
+            Acceptes-tu ce site<br>
+            <strong>Sparkle Event Planner</strong><br>
+            comme cadeau de Noël ?
+        </p>
+
+        <button id="yesBtn" onclick="acceptGift()">Oui</button>
+        <button id="noBtn" onclick="declineGift()">Non</button>
+    </div>
+</div>
+
+<!-- 🏠 ACCUEIL -->
+<div id="home">
+    <h2>Bienvenue chez Sparkle Event Planner</h2>
+    <p>Chaque événement mérite une touche d’élégance et de magie ✨</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Tables décorées</h3>
+            <p>Des tables raffinées qui subliment chaque instant.</p>
+        </div>
+
+        <div class="card">
+            <h3>Événements à thème</h3>
+            <p>Des concepts uniques pensés pour marquer les esprits.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mariages</h3>
+            <p>Un jour inoubliable, pensé avec amour et élégance.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+/* INTRO DISPARAÎT */
+setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("home").style.display = "block";
+}, 3000);
+
+/* CADEAU DEJA ACCEPTE */
+if (localStorage.getItem("sparkle_owner") === "true") {
+    document.getElementById("giftModal").style.display = "none";
+}
+
+/* REFUS */
+function declineGift() {
+    alert("🎁 Ce cadeau t’attendra…");
+}
+
+/* ACCEPTATION */
+function acceptGift() {
+    let name = prompt("Quel est ton prénom ?");
+    if (!name) return;
+
+    localStorage.setItem("sparkle_owner", "true");
+    localStorage.setItem("sparkle_name", name);
+
+    document.getElementById("giftModal").style.display = "none";
+
+    let lower = name.toLowerCase();
+
+    if (
+        lower.includes("nell") ||
+        lower.includes("nang") ||
+        lower.includes("jennifer")
+    ) {
+        activateChristmas(name);
+    } else {
+        alert("Bienvenue " + name + " ✨");
+    }
+}
+
+/* 🎄 MODE NOËL */
+function activateChristmas(name) {
+    alert(
+        "🎄 Joyeux Noël " + name + " 🎁\n\n" +
+        "Tu es désormais la propriétaire officielle de\nSparkle Event Planner ✨"
+    );
+
+    document.body.style.boxShadow =
+        "inset 0 0 80px rgba(242,201,76,0.4)";
+}
+</script>
+
+</body>
+</html>

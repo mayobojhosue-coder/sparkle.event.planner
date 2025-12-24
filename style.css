@@ -1,0 +1,74 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #5a1530, #7a2048);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #f5d37a;
+    letter-spacing: 3px;
+}
+
+/* TEXTE EN BAS */
+.hero-text {
+    position: absolute;
+    bottom: 140px;
+    font-size: 1.05em;
+    color: #ffffff;
+    opacity: 0.95;
+    max-width: 600px;
+}
+
+/* SERVICES */
+.services {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* CARTES */
+.service-card {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 30px 35px;
+    border-radius: 20px;
+    border: 2px solid #f5d37a;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    width: 280px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5a1530;
+    font-size: 1.25em;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.6;
+}

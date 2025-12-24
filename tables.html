@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables décorées – Sparkle Event Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #6b1e2e;
+            color: white;
+        }
+
+        header {
+            padding: 20px 60px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .gold-line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .page-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        /* 🔍 ZOOM AJOUTÉ ICI (SANS RIEN CASSER) */
+        .photo-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+
+        .photo-card img:hover {
+            transform: scale(1.08);
+        }
+
+        .photo-card div {
+            padding: 20px;
+            color: #3b1b1b;
+            text-align: center;
+        }
+
+        .photo-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .photo-card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 34px;
+            }
+            .gallery {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="home.html">← Retour à l’accueil</a>
+</header>
+
+<div class="gold-line"></div>
+
+<section class="page-title">
+    <h1>Tables décorées</h1>
+    <p>
+        Chaque table est pensée comme une création élégante,
+        conçue pour sublimer vos événements et émerveiller vos invités.
+    </p>
+</section>
+
+<div class="gold-line"></div>
+
+<section class="gallery">
+
+    <div class="photo-card">
+        <img src="images/table1.jpg" alt="Tables fleuries">
+        <div>
+            <h3>Tables fleuries</h3>
+            <p>Des compositions florales délicates pour une ambiance douce et élégante.</p>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/table2.jpg" alt="Tables avec rubans">
+        <div>
+            <h3>Tables avec rubans</h3>
+            <p>Des finitions raffinées pour une touche romantique et sophistiquée.</p>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/table3.jpg" alt="Tables traditionnelles">
+        <div>
+            <h3>Tables traditionnelles</h3>
+            <p>Un style authentique mêlant tradition et élégance intemporelle.</p>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/table4.jpg" alt="Tables végétales">
+        <div>
+            <h3>Tables végétales</h3>
+            <p>Une décoration naturelle et fraîche pour une atmosphère apaisante.</p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

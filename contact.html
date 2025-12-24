@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact – Sparkle Event Planner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Polices élégantes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#6b1e2e;
+    color:white;
+}
+
+.container{
+    max-width:720px;
+    margin:90px auto;
+    background:white;
+    color:#3b1b1b;
+    padding:50px;
+    border-radius:8px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+
+h1{
+    font-family:'Playfair Display',serif;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:15px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:grid;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.buttons a{
+    text-align:center;
+    padding:14px;
+    border:1px solid #d4af37;
+    color:#6b1e2e;
+    text-decoration:none;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    background:#d4af37;
+    color:white;
+}
+
+form{
+    display:grid;
+    gap:18px;
+}
+
+input, textarea, select{
+    padding:13px;
+    font-family:'Montserrat',sans-serif;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+button{
+    margin-top:10px;
+    padding:14px;
+    background:none;
+    border:1px solid #d4af37;
+    color:#6b1e2e;
+    font-size:14px;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#d4af37;
+    color:white;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    margin-top:30px;
+    font-size:13px;
+    color:#6b1e2e;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact</h1>
+<p class="subtitle">
+Parlons de votre événement et créons ensemble un moment inoubliable ✨
+</p>
+
+<!-- BOUTONS RAPIDES -->
+<div class="buttons">
+    <a href="https://wa.me/0000000000" target="_blank">Discuter sur WhatsApp</a>
+    <a href="mailto:sparkleevent@gmail.com">Envoyer un email</a>
+</div>
+
+<!-- FORMULAIRE -->
+<form action="mailto:sparkleevent@gmail.com" method="post" enctype="text/plain">
+
+<input type="text" name="Nom" placeholder="Votre nom" required>
+<input type="email" name="Email" placeholder="Votre email" required>
+
+<select name="Type d'événement">
+    <option>Type d’événement</option>
+    <option>Mariage</option>
+    <option>Événement à thème</option>
+    <option>Tables décorées</option>
+</select>
+
+<textarea name="Message" placeholder="Décrivez votre événement..."></textarea>
+
+<button type="submit">Envoyer la demande</button>
+
+</form>
+
+<a class="back" href="home.html">← Retour à l’accueil</a>
+
+</div>
+
+</body>
+</html>

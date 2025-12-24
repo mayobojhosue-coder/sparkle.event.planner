@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Sparkle Event Planner</title>
+
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #6b0f1a;
+            color: #fff;
+        }
+
+        header {
+            padding: 25px 50px;
+        }
+
+        header a {
+            color: #f2c94c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #f2c94c;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .contact-box {
+            background-color: #ffffff;
+            color: #333;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        form textarea {
+            grid-column: span 2;
+            resize: none;
+            height: 120px;
+        }
+
+        .btn-submit {
+            grid-column: span 2;
+            padding: 14px;
+            background-color: #6b0f1a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #8c1d2a;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            font-size: 15px;
+        }
+
+        .contact-info a {
+            color: #f2c94c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* 🔥 BOUTON WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="home.html">← Retour à l’accueil</a>
+</header>
+
+<div class="contact-container">
+    <h1>Contact</h1>
+    <p class="subtitle">
+        Un projet ? Une idée ? Parlons-en et créons ensemble un moment inoubliable ✨
+    </p>
+
+    <div class="contact-box">
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <input type="text" placeholder="Type d’événement">
+            <input type="text" placeholder="Date souhaitée">
+            <textarea placeholder="Décrivez votre projet..."></textarea>
+            <button class="btn-submit" type="submit">
+                Envoyer le message
+            </button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p>📞 Téléphone :
+            <a href="tel:+24174404159">+241 74 40 41 59</a>
+        </p>
+
+        <p>📧 Email :
+            <a href="mailto:sparkleevent241@gmail.com">
+                sparkleevent241@gmail.com
+            </a>
+        </p>
+
+        <p>📍 Disponible pour vos événements sur mesure</p>
+    </div>
+</div>
+
+<footer>
+    © 2025 Sparkle Event Planner – Élégance & émotion
+</footer>
+
+<!-- 🔥 BOUTON WHATSAPP FLOTTANT -->
+<a class="whatsapp-btn"
+   href="https://wa.me/24174404159?text=Bonjour%20Sparkle%20Event%20Planner%2C%20j%E2%80%99aimerais%20des%20informations%20pour%20un%20%C3%A9v%C3%A9nement."
+   target="_blank">
+   💬 WhatsApp
+</a>
+
+</body>
+</html>

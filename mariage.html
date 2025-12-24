@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mariages – Sparkle Event Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #6b1e2e;
+            color: #ffffff;
+        }
+
+        .gold-line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+
+        header {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .page-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .photo-card {
+            background: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-card div {
+            padding: 20px;
+            color: #3b1b1b;
+            text-align: center;
+        }
+
+        .photo-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .photo-card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 34px;
+            }
+            .gallery {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="home.html">← Retour à l’accueil</a>
+    <a href="#">Mariages</a>
+</header>
+
+<div class="gold-line"></div>
+
+<section class="page-title">
+    <h1>Mariages</h1>
+    <p>
+        Chaque mariage est une histoire unique.
+        Nous créons des décors élégants, romantiques et intemporels,
+        pensés pour sublimer le plus beau jour de votre vie.
+    </p>
+</section>
+
+<div class="gold-line"></div>
+
+<section class="gallery">
+
+    <div class="photo-card"><img src="images/mariage1.jpg"><div><h3>Ambiance romantique</h3><p>Une atmosphère douce et élégante.</p></div></div>
+    <div class="photo-card"><img src="images/mariage2.jpg"><div><h3>Tables raffinées</h3><p>Des tables pensées dans les moindres détails.</p></div></div>
+    <div class="photo-card"><img src="images/mariage3.jpg"><div><h3>Décor majestueux</h3><p>Une mise en scène spectaculaire.</p></div></div>
+    <div class="photo-card"><img src="images/mariage4.jpg"><div><h3>Cérémonie élégante</h3><p>Un cadre magique pour dire oui.</p></div></div>
+    <div class="photo-card"><img src="images/mariage5.jpg"><div><h3>Détails précieux</h3><p>Chaque détail compte.</p></div></div>
+
+    <div class="photo-card"><img src="images/mariage6.jpg"><div><h3>Harmonie florale</h3><p>Des fleurs choisies avec soin.</p></div></div>
+    <div class="photo-card"><img src="images/mariage7.jpg"><div><h3>Réception chic</h3><p>Une réception élégante et chaleureuse.</p></div></div>
+    <div class="photo-card"><img src="images/mariage8.jpg"><div><h3>Décor lumineux</h3><p>Jeux de lumière et ambiance féérique.</p></div></div>
+    <div class="photo-card"><img src="images/mariage9.jpg"><div><h3>Style personnalisé</h3><p>Un mariage à votre image.</p></div></div>
+    <div class="photo-card"><img src="images/mariage10.jpg"><div><h3>Émotion pure</h3><p>Des souvenirs gravés à jamais.</p></div></div>
+
+</section>
+
+</body>
+</html>
